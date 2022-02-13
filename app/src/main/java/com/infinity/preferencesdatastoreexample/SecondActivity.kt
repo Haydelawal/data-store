@@ -25,13 +25,10 @@ import kotlinx.coroutines.flow.first
 @AndroidEntryPoint
 class SecondActivity : AppCompatActivity() {
 
-//    private var mainViewModel: ActivityViewModel ?= null
-//
-//    private var context: Context ?= null
+
 
     private lateinit var binding: ActivitySecondBinding
 
-//    private  var repository: ImplRepository ?= null
 
 
     private val activityViewModel: ActivityViewModel by viewModels()
@@ -43,13 +40,6 @@ class SecondActivity : AppCompatActivity() {
 
 
 
-//        binding.textView.text = activityViewModel.phone.toString()
-//        binding.textView2.text = activityViewModel.name.observe(this, {
-//
-//
-//                NAME -> activityViewModel.address.value = NAME
-//        }).toString()
-//        binding.textView3.text = activityViewModel.name.toString()
 
         val viewModel = ViewModelProvider(this).get(ActivityViewModel::class.java)
         viewModel.retrieveDate()
