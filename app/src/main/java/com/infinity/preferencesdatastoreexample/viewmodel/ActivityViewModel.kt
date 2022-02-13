@@ -1,5 +1,6 @@
 package com.infinity.preferencesdatastoreexample.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -20,6 +21,13 @@ class ActivityViewModel @Inject constructor(private  val implRepository: ImplRep
 
     var phonebook : MutableLiveData<Phonebook> = MutableLiveData()
 
+    ///// me
+
+    fun showTheData(): LiveData<Phonebook> {
+        return phonebook
+    }
+
+    /////
     fun saveData(){
         viewModelScope.launch(Dispatchers.IO) {
             implRepository.savePhoneBook(

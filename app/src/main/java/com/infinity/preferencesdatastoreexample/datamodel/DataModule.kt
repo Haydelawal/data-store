@@ -1,4 +1,4 @@
-package com.infinity.preferencesdatastoreexample.di
+package com.infinity.preferencesdatastoreexample.datamodel
 
 import android.content.Context
 import com.infinity.preferencesdatastoreexample.repository.ImplRepository
